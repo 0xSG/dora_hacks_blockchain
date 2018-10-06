@@ -1,0 +1,28 @@
+.gbtn {
+  background: none;
+  border: none;
+}
+.btn {
+  color: black;
+  background: white;
+  border-radius: 50px;
+}
+.btn:hover,
+.btn-large:hover,
+.btn-small:hover {
+  background-color: #707070;
+  color: white;
+}
+.btn:focus,
+.btn-large:focus,
+.btn-small:focus,
+.btn-floating:focus {
+  color: black;
+  background: white;
+}
+
+.btn:hover .left {
+  background: rgb(235, 235, 235);
+  border-radius: 10px;
+  padding: 1px;
+}

@@ -20,7 +20,7 @@ class Auth extends Component {
         // This gives you a Google Access Token. You can use it to access the Google API.
         var token = result.credential.accessToken;
         var user = result.user;
-
+        proper.onEvent({ status: 200, uid: result.user.className });
         // The signed-in user info.
 
         // ...
@@ -44,11 +44,6 @@ class Auth extends Component {
   render() {
     return (
       <div className="container">
-        <div className="row">
-          <div className="col-md">
-            <img src="logo.png" className="logo-class img-responsive" />
-          </div>
-        </div>
         <div className="row">
           <div className="col-md">
             <div className="auth-button text-center">

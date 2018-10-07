@@ -1,0 +1,12 @@
+.home-content {
+  /* text-align: center; */
+}
+.card {
+  width: auto;
+  padding: 10px;
+  margin-left: 10%;
+  margin-right: 10%;
+  min-width: 300px;
+  max-width: 430px;
+}
+/* https://0xpulsar.github.io/certificate-gen/ */

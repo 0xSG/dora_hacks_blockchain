@@ -30,17 +30,26 @@ app.post("/getUrls", function(req, res) {
   var data = req.body;
   var uid = data.uid;
   var arr = [];
+  console.log(uid);
   database
     .ref("/users/" + uid)
     .once("value")
     .then(function(snapshot) {
+      if (snapshot.val() == null) res.status(500).send("x");
+
       var shot = snapshot.val();
-      var data = shot.data;
-      for (var ele in data) {
-        arr.push(data[ele]);
+      var DAT = shot.data;
+      for (var ele in DAT) {
+        arr.push(DAT[ele]);
       }
       res.status(200).send(arr);
+    })
+    .catch(error => {
+      res.status(500).send({error:"x"});
     });
+});
+app.get("/data", (req, res) => {
+  res.status(200).send("hi");
 });
 
 app.listen(55667);
